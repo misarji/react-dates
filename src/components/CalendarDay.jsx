@@ -149,6 +149,18 @@ class CalendarDay extends React.Component {
           daySizeStyles,
         )}
       >
+        <span
+          {...css(
+            styles.CalendarDay_span1,
+            selected && styles.CalendarDay_span1__selected
+            )}>
+        </span>
+        <span
+          {...css(
+            styles.CalendarDay_span2,
+            selected && styles.CalendarDay_span2__selected
+            )}>
+        </span>
         <button
           {...css(
             styles.CalendarDay_button,
@@ -187,6 +199,22 @@ export default withStyles(({ reactDates: { color } }) => ({
       border: `1px double ${color.core.borderLight}`,
       color: 'inherit',
     },
+  },
+
+  CalendarDay_span1: {
+
+  },
+
+  CalendarDay_span1__selected: {
+
+  },
+
+  CalendarDay_span2: {
+
+  },
+
+  CalendarDay_span2__selected: {
+
   },
 
   CalendarDay_button: {
