@@ -151,14 +151,13 @@ class CalendarDay extends React.Component {
       >
         <span
           {...css(
-            styles.CalendarDay_span1,
-            selected && styles.CalendarDay_span1__selected
+            selected && styles.CalendarDay_span__selected
             )}>
         </span>
         <span
           {...css(
-            styles.CalendarDay_span2,
-            selected && styles.CalendarDay_span2__selected
+            modifiers.has('selected-start') && styles.CalendarDay__selected_span_start,
+            modifiers.has('selected-end') && styles.CalendarDay__selected_span_end
             )}>
         </span>
         <button
@@ -201,19 +200,15 @@ export default withStyles(({ reactDates: { color } }) => ({
     },
   },
 
-  CalendarDay_span1: {
+  CalendarDay_span__selected: {
 
   },
 
-  CalendarDay_span1__selected: {
+  CalendarDay__selected_span_start: {
 
   },
 
-  CalendarDay_span2: {
-
-  },
-
-  CalendarDay_span2__selected: {
+  CalendarDay__selected_span_end: {
 
   },
 
